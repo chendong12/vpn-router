@@ -1,0 +1,6 @@
+#通过U盘启动软路由，并保证可以通过软路由上网
+#在windows下使用putty工具登陆到lede软路由执行下面命令后将自动把lede系统安装到软路由的硬盘下
+cd /tmp
+wget http://firmware.koolshare.cn/LEDE_X64_fw867/openwrt-koolshare-mod-v2.24-r9105-ddb753c54d-x86-64-combined-squashfs.img.gz
+gzip -dc /tmp/openwrt*.img.gz | dd of=/dev/sda
+reboot
